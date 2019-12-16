@@ -6,7 +6,8 @@ var gulp = require("gulp"),
   livereload = require("gulp-livereload"),
   sourcemaps = require("gulp-sourcemaps"),
   uglify = require("gulp-minify"),
-  plumber = require('gulp-plumber');
+  gulp_watch_pug = require('gulp-watch-pug');
+
 
 
 gulp.task("html", async function buildHTML() {

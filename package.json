@@ -24,6 +24,7 @@
     "pug": "^2.0.4"
   },
   "dependencies": {
+    "gulp-watch-pug": "^1.0.0",
     "static-server": "^2.2.1"
   }
 }
