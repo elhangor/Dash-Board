@@ -11,10 +11,8 @@ var gulp = require("gulp"),
 
 gulp.task("html", async function buildHTML() {
   return gulp
-    .src("stage/html/**/*.pug")
+    .src("stage/html/*.pug")
     .pipe(pug({ pretty: true }))
-    .pipe(pug().on('error', pug.logError))
-    .pipe(plumber())
     .pipe(gulp.dest("dist"))
     .pipe(livereload());
 });
