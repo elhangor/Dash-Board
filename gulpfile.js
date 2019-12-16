@@ -40,6 +40,6 @@ gulp.task("watch", function() {
   require("./server.js");
   livereload.listen();
   gulp.watch("stage/pug/**/*.pug", gulp.series("html"));
-  gulp.watch("stage/css/**/*.scss", gulp.series("css"));
+  gulp.watch("stage/css/*.scss", gulp.series("css"));
   gulp.watch("stage/js/*.js", gulp.series("js"));
 });
