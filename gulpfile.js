@@ -5,12 +5,9 @@ var gulp = require("gulp"),
   pug = require("gulp-pug"),
   livereload = require("gulp-livereload"),
   sourcemaps = require("gulp-sourcemaps"),
-  uglify = require("gulp-minify"),
-  gulp_watch_pug = require('gulp-watch-pug');
+  uglify = require("gulp-minify");
 
-
-
-gulp.task("html", async function buildHTML() {
+gulp.task("html", function buildHTML() {
   return gulp
     .src("stage/html/*.pug")
     .pipe(pug({ pretty: true }))
@@ -42,7 +39,7 @@ gulp.task("js", async function() {
 gulp.task("watch", function() {
   require("./server.js");
   livereload.listen();
-  gulp.watch("stage/pug/*.pug", gulp.series("html"));
-  gulp.watch("stage/css/*.scss", gulp.series("css"));
+  gulp.watch("stage/pug/**/*.pug", gulp.series("html"));
+  gulp.watch("stage/css/**/*.scss", gulp.series("css"));
   gulp.watch("stage/js/*.js", gulp.series("js"));
 });
