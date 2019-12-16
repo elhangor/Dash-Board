@@ -5,12 +5,16 @@ var gulp = require("gulp"),
   pug = require("gulp-pug"),
   livereload = require("gulp-livereload"),
   sourcemaps = require("gulp-sourcemaps"),
-  uglify = require("gulp-minify");
+  uglify = require("gulp-minify"),
+  plumber = require('gulp-plumber');
+
 
 gulp.task("html", async function buildHTML() {
   return gulp
     .src("stage/html/**/*.pug")
     .pipe(pug({ pretty: true }))
+    .pipe(pug().on('error', pug.logError))
+    .pipe(plumber())
     .pipe(gulp.dest("dist"))
     .pipe(livereload());
 });
