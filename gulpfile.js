@@ -9,15 +9,15 @@ var gulp = require("gulp"),
 
 gulp.task("html", async function buildHTML() {
   return gulp
-    .src("stage/html/*.pug")
+    .src("stage/html/**/*.pug")
     .pipe(pug({ pretty: true }))
     .pipe(gulp.dest("dist"))
-    // .pipe(livereload());
+    .pipe(livereload());
 });
 
 gulp.task("css", async function() {
   return gulp
-    .src("stage/css/*.scss")
+    .src("stage/css/**/*.scss")
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
     .pipe(prefix("last 5 versions"))
