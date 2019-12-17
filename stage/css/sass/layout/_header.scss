@@ -1,5 +1,111 @@
 .header{
+  background-color: #fff;
+  padding: 10px;
+  .header-icon{
+    background-color: #f2f1f6;
+    border-radius: 50%;
+    height: 30px;
+    color: #55555569;
+    cursor: pointer;
+    width: 30px;
+    padding: 5px;
+    margin-left: 10px;
+  }
   .toggle-sidebar{
     cursor: pointer;
+    width: 30px;
+    height: 30px;
+  }
+  .notifications-container{
+    display: inline-block;
+    .dropdown-menu{
+      top:10px !important;
+      min-width: 450px;
+      padding: 0;
+      border: none;
+      box-shadow: 0 0 10px #ddd;
+      &:before{
+        content:'';
+        position: absolute;
+        top: -20px;
+        left: 5px;
+        border-style: solid;
+        border-width: 10px;
+        border-color: transparent transparent #333 transparent;
+      }
+      .noti-head{
+        background-color: #333;
+        padding: 10px;
+        color: #fff;
+        span{
+          float: right;
+        }
+      }
+      .noti-content{
+        ul{
+          padding: 0;
+          margin: 0;
+          li{
+            .noti{
+              padding: 5px 10px;
+              .icon{
+                background-color: #eee;
+                margin-right: 5px;
+                height: 40px;
+                padding: 10px;
+                line-height: 40px;
+                text-align: center;
+                width: 40px;
+                border-radius: 50%;
+                top:8px;
+                position: relative;
+              }
+            }
+          }
+        }
+      }
+      .noti-footer{
+        padding: 10px;
+        a{
+          display: block;
+          padding: 5px;
+          border-top: 1px solid #eee;
+          &:hover{
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .usermenu-container{
+    float: right;
+    .username{
+      cursor: pointer;
+      .avatar{
+        width: 40px;
+        height: 40px;
+      }
+      .user{
+        font-weight: bold;
+        color: #777;
+        margin: 0 10px;
+      }
+    }
+    .dropdown-menu{
+      top:10px !important;
+      min-width: 400px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px #ddd;
+      &:before{
+        content:'';
+        position: absolute;
+        top: -20px;
+        right: 40px;
+        border-style: solid;
+        border-width: 10px;
+        border-color: transparent transparent #ddd transparent;
+      }
+    }
   }
 }

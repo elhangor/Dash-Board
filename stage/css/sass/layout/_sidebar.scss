@@ -1,16 +1,93 @@
 .page{
-    .sidebar{
-			width: 250px;
-			position: fixed;
-			top:0;
-			left: 0;
-			height: 100%;
-			color:#fff;
-			background-color: #333;
-			padding: 15px;
-			transition: .3s;
-			&.no-sidebar{
-				left: -250px;
+	.sidebar{
+		width: 250px;
+		position: fixed;
+		top:0;
+		left: 0;
+		height: 100%;
+		color:#fff;
+		background-color: #333;
+		padding: 15px;
+		transition: .3s;
+		&.no-sidebar{
+			left: -250px;
+		}
+		.logo-area{
+			font-weight: bold;
+			font-size: 26px;
+			margin-bottom: 20px;
+		}
+		.link-area{
+			// All Links
+			li{
+				a{
+					text-decoration: none;
+					padding: 10px 20px;
+					display: block;
+					color: #ccc;
+					transition: .3s;
+					&:hover{
+						color: #fff;
+					}
+				}
 			}
-    }
+			// Main Links
+			> li > a{
+				color: #fff;
+				position: relative;
+				&:before{
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 0;
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					transform: translateY(-50%);
+					border: 2px solid #fff;
+				}
+				&:hover{
+					padding-left: 25px;
+				}
+				.fa-angle-right{
+					float: right;
+					position: relative;
+					top: 4px;
+					transition: .3s;
+					&.down{
+						transform: rotate(90deg);
+					}
+				}
+			}
+			// Child Links
+			.child-link{
+				display: none;
+				position: relative;
+				&:before{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 3px;
+					width: 3px;
+					height: 100%;
+					background-color:#666;
+				}
+				a{
+					position: relative;
+					&:hover{
+						padding-left: 25px;
+					}
+					&:hover:before{
+						content:'';
+						position: absolute;
+						left: 3px;
+						top: 0;
+						width: 3px;
+						height: 100%;
+						background-color: #fff;
+					}
+				}
+			}
+		}
+	}
 }
