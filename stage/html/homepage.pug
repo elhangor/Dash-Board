@@ -11,9 +11,8 @@ html(lang="en")
 		.page.home-page
 			include pug/layout/sidebar
 			.content-area
-				.header
-					i.fas.fa-exchange-alt.fa-lg.toggle-sidebar
+				include pug/layout/header
 				.content
 					h1 #{pageTitle}
-					
+
 	include pug/layout/scripts
