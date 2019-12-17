@@ -9,5 +9,8 @@
 			background-color: #333;
 			padding: 15px;
 			transition: .3s;
+			&.no-sidebar{
+				left: -250px;
+			}
     }
 }

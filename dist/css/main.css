@@ -15,8 +15,12 @@
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
-  will-change: width;
   float: right;
+  will-change: width;
+}
+
+.page .content-area.no-sidebar {
+  width: 100%;
 }
 
 .page .sidebar {
@@ -31,6 +35,16 @@
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
+}
+
+.page .sidebar.no-sidebar {
+  left: -250px;
+}
+
+.header .toggle-sidebar {
+  cursor: pointer;
+  font-size: 30px;
+  background-color: #666;
 }
 
 /*# sourceMappingURL=main.css.map */
