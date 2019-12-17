@@ -1,0 +1,12 @@
+.settings-box.hide-settings
+  i.fas.fa-cog.fa-lg.fa-fw.toggle-settings
+  .settings-content.text-center
+    .option-box.c-options
+      h5 color option
+      - var themes = ["n-theme","gr-theme","b-theme","w-theme","g-theme"]
+      ul.list-unstyled
+        each theme in themes 
+          li(data-theme=theme)
+    .option-box.f-options
+      h5 font option
+

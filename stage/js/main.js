@@ -18,7 +18,20 @@ $(function(){
       closeFullscreen();
     }
   });
-  
+  // Show & Hide settings
+  $('.toggle-settings').on('click',function(){
+    $(this).parent().toggleClass('hide-settings');
+  });
+  //  Switch Color Theme
+  var themeClasses = [];
+  $(".c-options li").each(function(){
+    themeClasses.push($(this).data("theme"));
+  });
+  $('.c-options li').on('click', function(){
+    $(this).addClass('active').siblings().removeClass('active');
+    $('body').removeClass(themeClasses.join(" "))
+    .addClass($(this).data("theme"));
+  });
 });
 
 var elem = document.documentElement;

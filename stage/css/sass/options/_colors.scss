@@ -1,0 +1,18 @@
+$themes:(
+  n-theme: (color:#16a085),
+  gr-theme: (color:#27ae60),
+  b-theme: (color:#2980b9),
+  w-theme: (color:#8e44ad),
+  g-theme: (color:#2c3e50)
+);
+
+@each $theme, $map in $themes {
+  .#{$theme} {
+    .classname{
+      color: map-get($map, color);
+    }
+    .page .content-area .content h1{
+      color: map-get($map, color);
+    }
+  }
+}
